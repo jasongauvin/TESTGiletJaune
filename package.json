@@ -1,5 +1,5 @@
 {
-  "name": "TESTGiletJaune",
+  "name": "test-gilet-jaune",
   "version": "1.0.0",
   "description": "Test technique pour appartoo",
   "main": "server.js",
@@ -24,6 +24,7 @@
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "mongodb": "^3.2.4",
+    "mongoose": "^5.5.8",
     "path": "^0.12.7"
   }
 }
