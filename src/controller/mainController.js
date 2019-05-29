@@ -72,8 +72,25 @@ class mainController {
         });
     }
 
-    static delete (req, res) {
-        req
+    static deleteItem (req, res) {
+        return new Promise( (resolve, reject) => {
+
+            let objectId = req.params.id
+
+            return Address.deleteOne({ _id: objectId })
+            .then( object => resolve( res.send({ msg: 'Object deleted' }) ))
+            .catch( err => reject( res.send( { msg: 'No data found for :id' } ) ) )
+
+        })
+
+
+
+        // let address = Address(req.body);
+        // console.log('deleted');
+        // Address.deleteOne({_id: address._id || null}, address)
+        // .then((doc) => {
+        //     res.send(doc).end()
+        // });
     }
 }
 

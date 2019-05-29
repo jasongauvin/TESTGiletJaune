@@ -13,7 +13,7 @@ router.get("/contact", MainController.findAll);
 
 router.post("/contact", MainController.createOrUpdate);
 
-router.delete("/contact", MainController.delete);
+router.delete("/contact/:id", MainController.deleteItem);
 
 
 //
